@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: auth-service
+  datasource:
+    # PostgreSQL
+    url: jdbc:postgresql://localhost:5432/db_users
+    username: postgres
+    password:
+  #drop n create table
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+security:
+  signing-key: MaYzkSjmkzPC57L
+  security-realm: Spring Boot JWT AUTH-SERVICE
+
+  jwt:
+    client-id: afris
+    client-secret: 12345
+    grant-type: password
+    scope-read: read
+    scope-write: write
+    refresh-token: refresh_token
+
+server:
+  port: 8181
+
