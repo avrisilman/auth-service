@@ -2,6 +2,7 @@ package com.jatis.auth.service.impl;
 
 import com.jatis.auth.model.User;
 import com.jatis.auth.repository.UserRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,9 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
+@AllArgsConstructor
 public class AppUserDetailsService implements UserDetailsService {
 
-    @Autowired
     private UserRepository userRepository;
 
     @Override
@@ -33,4 +34,5 @@ public class AppUserDetailsService implements UserDetailsService {
 
         return userDetails;
     }
+
 }

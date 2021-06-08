@@ -3,17 +3,17 @@ package com.jatis.auth.service.impl;
 import com.jatis.auth.model.User;
 import com.jatis.auth.repository.UserRepository;
 import com.jatis.auth.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     @Value("${security.jwt.client-secret}")
     private String secret;
 
-    @Autowired
     private UserRepository userRepository;
 
     @Override

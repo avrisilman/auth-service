@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Table(name = "app_user")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 public class User {
     @Id
